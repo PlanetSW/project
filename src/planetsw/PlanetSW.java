@@ -1,4 +1,9 @@
 package planetsw;
+/* authors Mariam Adham 
+* Mariam Ehab
+* Nour Adel
+* Nagham Sherif 
+* Marwa Belal */ 
 
 import java.util.ArrayList;
 import java.util.Scanner;
