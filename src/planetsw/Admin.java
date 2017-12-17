@@ -1,13 +1,12 @@
 package planetsw;
-//m
+
 import java.util.Scanner;
 
 
 public class Admin extends User
 {
-    void viewsuggest()
+    void viewsuggest(PlanetDB ss)
     {
-        PlanetSW ss=new PlanetSW();
         System.out.println("Normal Suggestion : ");
         int i=0;
         Scanner sc = new Scanner(System.in);
@@ -20,6 +19,7 @@ public class Admin extends User
             Product p = new Product();
             p.setName(ss.suggestN.get(i));
             ss.products.add(p);
+            //ss.suggesto.remove(p); //////////////////////////////////////
             }
         }
         
@@ -43,7 +43,8 @@ public class Admin extends User
             ss.products.add(p);
             for(int j=0 ; j<ss.registered.size() ; j++)
             {
-                Owner o=(Owner) ss.registered.get(j);   
+                if(ss.registered.get(j).getType()=="owner"){
+                Owner o =(Owner) ss.registered.get(j);
                 if(o.getID()==ss.suggesto.get(i).getOwnerID())
                 {
                     for(int k=0 ; k<o.getArrayofstores().size() ; k++)
@@ -69,7 +70,7 @@ public class Admin extends User
                     }
                 }
             }
-            }
+            }}
         }
         
         

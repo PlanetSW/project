@@ -5,7 +5,11 @@ import java.util.ArrayList;
 public class OnlineStore extends Store {
     
     private ArrayList<OnlineProduct> arrayofproducts;
-
+    OnlineStore()
+    {
+         ArrayList<OnlineProduct> arrayofproductss=new ArrayList<>();
+         arrayofproducts=arrayofproductss;
+    }
     public ArrayList<OnlineProduct> getArrayofproducts() {
         return arrayofproducts;
     }
@@ -13,15 +17,5 @@ public class OnlineStore extends Store {
     public void setArrayofproducts(ArrayList<OnlineProduct> arrayofproducts) {
         this.arrayofproducts = arrayofproducts;
     }
-     public void explore()
-    {
-        System.out.println("Products");
-        for(int i =0; i< getArrayofproducts().size(); i++)
-        {
-            System.out.print(getArrayofproducts().get(i).getName()+"  ");
-            System.out.print(getArrayofproducts().get(i).getProductID()+"  ");
-            System.out.print(getArrayofproducts().get(i).getPrice()+"  ");
-            //getArrayofproducts().get(i).setViewCounter(getArrayofproducts().get(i).getViewCounter()+1);
-        }
-    }
+    
 }

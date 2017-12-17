@@ -9,6 +9,15 @@ public class Store
     private int StoreID=++it;
     private String Address;
     boolean type;
+    private int ownerID;
+
+    public void setOwnerID(int ownerID) {
+        this.ownerID = ownerID;
+    }
+
+    public int getOwnerID() {
+        return ownerID;
+    }
 
     public boolean isType() {
         return type;
@@ -22,10 +31,6 @@ public class Store
         this.name = name;
     }
 
-   /* public void setArrayofproducts(ArrayList<Product> arrayofproducts) {
-        this.arrayofproducts = arrayofproducts;
-    }
-*/
     public void setStoreID(int StoreID) {
         this.StoreID = StoreID;
     }
@@ -38,20 +43,14 @@ public class Store
         return name;
     }
 
-  /*  public ArrayList<Product> getArrayofproducts() {
-        return arrayofproducts;
-    }
-*/
     public int getStoreID() {
         return StoreID;
     }
 
-    public String getAddress() {
+    public String getAddress()
+    {
         return Address;
     }
-       public void explore()
-    {
-    }
     
-   
+    
 }
