@@ -5,49 +5,23 @@ import java.util.Scanner;
 
 public class PlanetSW {
 
-
     public static void main(String[] args) {
 
         PlanetDB db = new PlanetDB();
         PlanetSW p = new PlanetSW();
         User u = new User();
         NormalUser nu = new NormalUser();
-        UserControler uc=new UserControler();
-        StoreController sc=new StoreController();
-        NormalUserController nuc =new NormalUserController();
-        Brandcontroller bc= new Brandcontroller();
+        UserControler uc = new UserControler();
+        StoreController sc = new StoreController();
+        NormalUserController nuc = new NormalUserController();
+        Brandcontroller bc = new Brandcontroller();
         OwnerController oc = new OwnerController();
-        ProductController pc= new ProductController();
-        VoucherController vc= new VoucherController();
+        ProductController pc = new ProductController();
+        VoucherController vc = new VoucherController();
         Admin aa = new Admin();
         Owner ow = new Owner();
         Brand b = new Brand();
         Store s2 = new Store();
-        /*pu.setName("bntlon");
-        pu.setAmount(2);
-        pu.setBrandName(b);
-        pu.setStoreID(1);
-        pu.setProductID(1);
-        pu.setCategory("p");
-        pu.setOwnerID(1);
-        pu.setPrice(120);
-        pu.setCheckNormal(true);
-        pu.setBuyCounter(0); /////////////////////
-        pu.setViewCounter(0);
-        db.products.add(pu);
-        s2.setName("hai");
-        s2.setAddress("mn");
-        s2.setOwnerID(1);
-        s2.setStoreID(1);
-        s2.setType(true);
-        db.stores.add(s2);
-        //ow.getArrayofstores().add(s2);
-        b.setBrandID(1);
-        b.setName("zara");
-        b.setOwnerID(1);
-        b.setCounter(0); ////////////////////////////
-        db.brands.add(b);
-        //ow.getArrayofbrand().add(b);*/
         ow.setName("hagar");
         ow.setPassword("h");
         ow.setID(1);
@@ -73,60 +47,60 @@ public class PlanetSW {
             ///////////////////////////////////////////////////////////////////////////
             System.out.println("Users");
             for (int i = 0; i < db.registered.size(); i++) {
-                System.out.println(db.registered.get(i).getName());
-                System.out.println(db.registered.get(i).getEmail());
-                System.out.println(db.registered.get(i).getPassword());
-                System.out.println(db.registered.get(i).getType());
-                System.out.println("//////////////////////");
+                System.out.println("Name : "+db.registered.get(i).getName());
+                System.out.println("Email : "+db.registered.get(i).getEmail());
+                System.out.println("Password : "+db.registered.get(i).getPassword());
+                System.out.println("Type : "+db.registered.get(i).getType());
+                System.out.println("------------------------------------------------------------------------------");
             }
             System.out.println("Stores");
             for (int i = 0; i < db.stores.size(); i++) {
-                System.out.println(db.stores.get(i).getName());
-                System.out.println(db.stores.get(i).getStoreID());
-                System.out.println(db.stores.get(i).getOwnerID());
-                System.out.println(db.stores.get(i).getAddress());
-                System.out.println(db.stores.get(i).isType());
-                System.out.println("///////////////////////////////");
+                System.out.println("Name : "+db.stores.get(i).getName());
+                System.out.println("ID : "+db.stores.get(i).getStoreID());
+                System.out.println("Owner ID : "+db.stores.get(i).getOwnerID());
+                //System.out.println(db.stores.get(i).getAddress());
+                //System.out.println(db.stores.get(i).isType());
+                System.out.println("------------------------------------------------------------------------------");
             }
             System.out.println("Brands");
             for (int i = 0; i < db.brands.size(); i++) {
-                System.out.println(db.brands.get(i).getName());
-                System.out.println(db.brands.get(i).getBrandID());
-                System.out.println(db.brands.get(i).getOwnerID());
-                System.out.println(db.brands.get(i).getCounter());
-                System.out.println("///////////////////////////////");
+                System.out.println("Name : "+db.brands.get(i).getName());
+                System.out.println("ID : "+db.brands.get(i).getBrandID());
+                System.out.println("Owner ID : "+db.brands.get(i).getOwnerID());
+                //System.out.println(db.brands.get(i).getCounter());
+                System.out.println("------------------------------------------------------------------------------");
             }
             System.out.println("products");
             for (int i = 0; i < db.products.size(); i++) {
-                System.out.println(db.products.get(i).getName());
-                System.out.println(db.products.get(i).getProductID());
-                System.out.println(db.products.get(i).getOwnerID());
-                System.out.println(db.products.get(i).getBrandName());
-                System.out.println(db.products.get(i).getPrice());
-                System.out.println(db.products.get(i).getCategory());
-                System.out.println(db.products.get(i).getAmount());
-                System.out.println(db.products.get(i).getBuyCounter());
-                System.out.println(db.products.get(i).getStoreID());
-                System.out.println(db.products.get(i).getViewCounter());
-                System.out.println("///////////////////////////////");
+                System.out.println("Name : "+db.products.get(i).getName());
+                System.out.println("ID : "+db.products.get(i).getProductID());
+                //System.out.println(db.products.get(i).getOwnerID());
+                //System.out.println(db.products.get(i).getBrandName());
+                System.out.println("Price : "+db.products.get(i).getPrice());
+                //System.out.println(db.products.get(i).getCategory());
+                //System.out.println(db.products.get(i).getAmount());
+                //System.out.println(db.products.get(i).getBuyCounter());
+                //System.out.println(db.products.get(i).getStoreID());
+                //System.out.println(db.products.get(i).getViewCounter());
+                System.out.println("------------------------------------------------------------------------------");
             }
             System.out.println("Vouchers");
             for (int i = 0; i < db.vouchers.size(); i++) {
-                System.out.println(db.vouchers.get(i).getName());
-                System.out.println(db.vouchers.get(i).getID());
-                System.out.println(db.vouchers.get(i).getVal());
-                System.out.println(db.vouchers.get(i).isAvl());
-                System.out.println("///////////////////////////////");
+                System.out.println("Name : "+db.vouchers.get(i).getName());
+                System.out.println("ID : "+db.vouchers.get(i).getID());
+                //System.out.println(db.vouchers.get(i).getVal());
+                //System.out.println(db.vouchers.get(i).isAvl());
+                System.out.println("------------------------------------------------------------------------------");
             }
             System.out.println("SuggestedO");
             for (int i = 0; i < db.suggesto.size(); i++) {
-                System.out.println(db.suggesto.get(i).getName());
-                System.out.println(db.suggesto.get(i).getAmount());
-                System.out.println(db.suggesto.get(i).getStoreID());
-                System.out.println(db.suggesto.get(i).getProductID());
-                System.out.println(db.suggesto.get(i).getOwnerID());
-                System.out.println(db.suggesto.get(i).getBrandName());
-                System.out.println("///////////////////////////////");
+                System.out.println("Name : "+db.suggesto.get(i).getName());
+                //System.out.println(db.suggesto.get(i).getAmount());
+                //System.out.println(db.suggesto.get(i).getStoreID());
+                //System.out.println(db.suggesto.get(i).getProductID());
+                //System.out.println(db.suggesto.get(i).getOwnerID());
+                //System.out.println(db.suggesto.get(i).getBrandName());
+                System.out.println("------------------------------------------------------------------------------");
             }
             //////////////////////////////////////////////////////////////////////////
             System.out.println("1. Register ");
@@ -162,13 +136,13 @@ public class PlanetSW {
                     m = a.nextInt();
                     switch (m) {
                         case 1:
-                            oc.Addstore(db,o);
+                            oc.Addstore(db, o);
                             break;
                         case 2:
-                            oc.Suggestp(db,o);
+                            oc.Suggestp(db, o);
                             break;
                         case 3:
-                            oc.AddProduct(db,o);
+                            oc.AddProduct(db, o);
                             break;
                         case 4:
                             System.out.println("Enter Id of the Store : ");
@@ -176,25 +150,11 @@ public class PlanetSW {
                             for (int j = 0; j < db.stores.size(); j++) {
                                 if (db.stores.get(j).getStoreID() == id) {
                                     sc.explore(db.stores.get(j));
-                                    
+
                                 }
                             }
                             break;
                         case 5:
-                            System.out.println("Enter product ID: ");
-                            Scanner in = new Scanner(System.in);
-                            Store sar = new Store();
-                            int IDD = in.nextInt();
-                            boolean ar = true;
-                            //if (sar.isType() == true) {
-                                OfflineStore oo = (OfflineStore) sar;
-                                for (int i = 0; i < oo.getArrayofproducts().size(); i++) {
-                                    if (oo.getArrayofproducts().get(i).getProductID() == IDD) {
-                                        oo.getArrayofproducts().get(i).ViewSPD(db);
-                                    }
-                                }
-                            //}
-                            
                             pc.ViewSPD(db);
                             break;
                         case 6:
@@ -217,7 +177,7 @@ public class PlanetSW {
                     m = a.nextInt();
                     switch (m) {
                         case 1:
-                            nuc.buyProduct(db , o);
+                            nuc.buyProduct(db, o);
                             break;
                         case 2:
                             System.out.println("Enter id of the store : ");
@@ -233,24 +193,11 @@ public class PlanetSW {
                             nuc.SuggestProduct(db);
                             break;
                         case 4:
-                            /*System.out.println("Enter product ID: ");
-                            Scanner in = new Scanner(System.in);
-                            Store sar = new Store();
-                            int IDD = in.nextInt();
-                            boolean ar = true;
-                            if (sar.isType() == true) {
-                                OfflineStore oo = (OfflineStore) sar;
-                                for (int i = 0; i < oo.getArrayofproducts().size(); i++) {
-                                    if (oo.getArrayofproducts().get(i).getProductID() == IDD) {
-                                        oo.getArrayofproducts().get(i).ViewSPD(db);
-                                    }
-                                }
-                            }*/
                             Product pr = new Product();
                             pc.ViewSPD(db);
                             break;
                         case 5:
-                            nuc.BuyVoucher(db,o);
+                            nuc.BuyVoucher(db, o);
                             break;
                         case 6:
                             check = false;
@@ -282,19 +229,6 @@ public class PlanetSW {
                             }
                             break;
                         case 4:
-                            /*System.out.println("Enter product ID: ");
-                            Scanner in = new Scanner(System.in);
-                            Store sar = new Store();
-                            int IDD = in.nextInt();
-                            boolean ar = true;
-                            if (sar.isType() == true) {
-                                OfflineStore oo = (OfflineStore) sar;
-                                for (int i = 0; i < oo.getArrayofproducts().size(); i++) {
-                                    if (oo.getArrayofproducts().get(i).getProductID() == IDD) {
-                                        oo.getArrayofproducts().get(i).ViewSPD(db);
-                                    }
-                                }
-                            }*/
                             pc.ViewSPD(db);
                             break;
                         case 5:
