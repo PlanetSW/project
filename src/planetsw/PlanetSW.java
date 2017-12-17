@@ -181,7 +181,7 @@ public class PlanetSW {
                             }
                             break;
                         case 5:
-                           /* System.out.println("Enter product ID: ");
+                            System.out.println("Enter product ID: ");
                             Scanner in = new Scanner(System.in);
                             Store sar = new Store();
                             int IDD = in.nextInt();
@@ -194,7 +194,7 @@ public class PlanetSW {
                                     }
                                 }
                             //}
-                            */
+                            
                             pc.ViewSPD(db);
                             break;
                         case 6:
